@@ -1,0 +1,11 @@
+.container_header {
+    background-color: var(--color-second);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+}
+
+.container_header img {
+    width: 50px;
+}

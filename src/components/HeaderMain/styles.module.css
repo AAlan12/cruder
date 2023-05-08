@@ -1,0 +1,29 @@
+.container_header {
+    background-color: var(--color-second);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-fourth);
+    cursor: pointer;
+}
+
+.btn_new button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-zero);
+    background-color: var(--color-third);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn_new button:hover {
+    transition: 0.2s;
+    background-color: var(--color-third-hover);
+}
