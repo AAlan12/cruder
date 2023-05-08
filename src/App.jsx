@@ -1,11 +1,21 @@
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'
+import Feed from './pages/Feed'
+import Edit from './pages/Edit'
+import Post from './pages/Post'
+import ReadMore from './pages/ReadMore'
 
 function App() {
   
 
   return (
-    <>
-      cruder
-    </>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Feed/>}></Route>
+        <Route path='/edit' element={<Edit/>}></Route>
+        <Route path='/post' element={<Post/>}></Route>
+        <Route path='/readmore' element={<ReadMore/>}></Route>
+      </Routes>
+    </Router>
   )
 }
 
