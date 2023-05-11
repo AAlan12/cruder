@@ -1,0 +1,17 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Linguagem js",
+        "description": "Vou falar de js",
+        "content": "Js é uma das linguagem mais populares"        
+      },
+      {
+        "id": 2,
+        "title": "Biblioteca React",
+        "description": "vou falar de React",
+        "content": "React é uma das bibliotecas mais usadas"       
+      }
+    ]
+   
+  }

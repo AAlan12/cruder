@@ -8,14 +8,14 @@ const Post = () => {
             <Header />
 
             <main>
-                 <div className={styles.container_card}>
+                <div className={styles.container_card}>
                     <h1>Create Post</h1>
                     <div className={styles.line_post}></div>
 
                     <div className={styles.card}>
                         <FormCruder />
                     </div>
-                 </div>
+                </div>
             </main>
         </>
     )
