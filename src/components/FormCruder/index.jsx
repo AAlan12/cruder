@@ -1,4 +1,3 @@
-import Inputs from '../Inputs';
 import styles from './styles.module.css';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom'
@@ -31,11 +30,23 @@ const FormCruder = () => {
 
     return (
         <form onSubmit={handleSubmit(addPost)}>
-            <Inputs label="Title" name="title" />
+            <div className="fields" >
+                <label>Título</label>
+                <input type="text" name="title" {...register("title")} />
+                <p className="error-message">{errors.title?.message}</p>
+            </div>
 
-            <Inputs label="Description" name="description" />
+            <div className="fields" >
+                <label>Descrição</label>
+                <input type="text" name="description" {...register("description")} />
+                <p className="error-message">{errors.description?.message}</p>
+            </div>
 
-            <Inputs label="Content" name="content" />
+            <div className="fields" >
+                <label>Conteúdo</label>
+                <textarea type="text" name="content" {...register("content")} ></textarea>
+                <p className="error-message">{errors.content?.message}</p>
+            </div>
 
             <div className={styles.btn_post}>
                 <button type='submit'>Submit</button>
