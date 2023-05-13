@@ -1,0 +1,57 @@
+.fields {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1.2rem;
+    color: var(--color-fourth);
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+
+    font-size: 1.2rem;
+
+    padding-left: 15px;
+}
+
+input {
+    height: 45px;
+}
+
+textarea {
+    height: 190px;
+    resize: none;
+
+    padding-top: 10px;
+}
+
+.btn-post{
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.btn-post button{
+    font-weight: 800;
+    font-size: 1.3rem;
+
+    padding: 5px 50px;
+    color: var(--color-zero);
+    background-color: var(--color-fifth);
+
+    border: 0;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+.error-message {
+    color: var(--color-sixth);
+}

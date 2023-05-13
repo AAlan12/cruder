@@ -30,19 +30,19 @@ const FormCruder = () => {
 
     return (
         <form onSubmit={handleSubmit(addPost)}>
-            <div className="fields" >
+            <div className={styles.fields}>
                 <label>Título</label>
                 <input type="text" name="title" {...register("title")} />
                 <p className="error-message">{errors.title?.message}</p>
             </div>
 
-            <div className="fields" >
+            <div className={styles.fields}>
                 <label>Descrição</label>
                 <input type="text" name="description" {...register("description")} />
                 <p className="error-message">{errors.description?.message}</p>
             </div>
 
-            <div className="fields" >
+            <div className={styles.fields}>
                 <label>Conteúdo</label>
                 <textarea type="text" name="content" {...register("content")} ></textarea>
                 <p className="error-message">{errors.content?.message}</p>

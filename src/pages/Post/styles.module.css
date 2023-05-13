@@ -1,11 +1,28 @@
-.container_header {
-    background-color: var(--color-second);
+main {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: auto;
+    justify-content: center;
+    padding: 3rem 0;
 }
 
-.container_header img {
-    width: 50px;
+.container_card {
+    background-color: var(--color-third);
+    padding: 30px 70px;
+    border-radius: 15px;
+}
+
+.container_card h1 {
+    font-weight: 800;
+    text-align: center;
+    color: var(--color-fourth);
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.line_post {
+    height: 2px;
+    background-color: var(--color-second);
+}
+
+.card {
+    margin-top: 25px;
 }
