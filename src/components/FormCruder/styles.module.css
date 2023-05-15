@@ -31,13 +31,13 @@ textarea {
     padding-top: 10px;
 }
 
-.btn-post{
+.btn_post{
     margin-top: 30px;
     text-align: center;
 
 }
 
-.btn-post button{
+.btn_post button{
     font-weight: 800;
     font-size: 1.3rem;
 
@@ -52,6 +52,6 @@ textarea {
 
 }
 
-.error-message {
+.error_message {
     color: var(--color-sixth);
 }

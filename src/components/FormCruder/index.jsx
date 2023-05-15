@@ -39,13 +39,13 @@ const FormCruder = () => {
             <div className={styles.fields}>
                 <label>Descrição</label>
                 <input type="text" name="description" {...register("description")} />
-                <p className="error-message">{errors.description?.message}</p>
+                <p className="error_message">{errors.description?.message}</p>
             </div>
 
             <div className={styles.fields}>
                 <label>Conteúdo</label>
                 <textarea type="text" name="content" {...register("content")} ></textarea>
-                <p className="error-message">{errors.content?.message}</p>
+                <p className="error_message">{errors.content?.message}</p>
             </div>
 
             <div className={styles.btn_post}>
