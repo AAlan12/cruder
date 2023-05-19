@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import "./styles.css";
+import { api } from '../../lib/axios';
 
 
 export function Form({ title, txtButton }) {
@@ -7,7 +8,7 @@ export function Form({ title, txtButton }) {
   const { register, handleSubmit, reset } = useForm()
 
   function handleCreatePost(data) {
-    console.log(data)
+    api.post('/posts', data)
     reset()
   }
 
