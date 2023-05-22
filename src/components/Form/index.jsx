@@ -12,7 +12,7 @@ const postSchema = yup.object({
 })
 
 
-export function Form({ title, txtButton }) {
+export function Form({ title, txtButton, onAction }) {
 
   const navigate = useNavigate()
 
@@ -27,7 +27,7 @@ export function Form({ title, txtButton }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(handleCreatePost)}>
+    <form onSubmit={handleSubmit(onAction)}>
       <h2>{title}</h2>
       <div className="field">
         <input placeholder="Título" {...register("title")} />
