@@ -1,7 +1,7 @@
+import "./styles.css";
 import { Form } from "../../components/Form";
 import { api } from '../../lib/axios';
-const navigate = useNavigate()
-import "./styles.css";
+import { useNavigate } from "react-router-dom";
 
 export function CreatePost() {
 
@@ -10,7 +10,6 @@ export function CreatePost() {
   function handleCreatePost(data) {
     api.post('/posts', data)
     navigate('/')
-    // reset()
   }
 
   return (
