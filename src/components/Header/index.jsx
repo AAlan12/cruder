@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import './styles.css'
-import Logo from '/logo-adc.svg'  
+import Logo from '/logo-adc.svg'
 
 export function Header() {
 
@@ -9,7 +9,11 @@ export function Header() {
     return (
         <header>
             <img src={Logo} alt="" />
-            <button onClick={() => navigate('/createPost')} >Criar post</button>
+            <div className='header_btn'>
+                <button onClick={() => navigate('/createPost')} >Criar post</button>
+                <button onClick={() => navigate('/')} >Posts</button>
+            </div>
+
         </header>
     )
 }
