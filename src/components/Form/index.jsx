@@ -1,7 +1,12 @@
-import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import "./styles.css";
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { api } from '../../lib/axios';
+
+
 
 const postSchema = yup.object({
   title: yup.string().required('Informe o campo título'),
@@ -12,9 +17,20 @@ const postSchema = yup.object({
 
 export function Form({ title, txtButton, onAction }) {
 
-  const { register, handleSubmit, reset, formState: {errors} } = useForm({
+  const { id } = useParams()
+
+  const { register, handleSubmit, reset, formState: { errors } } = useForm({
     resolver: yupResolver(postSchema)
   })
+
+  async function getDataUpdate() {
+    const response = await api.get(`/posts/${id}`);
+    reset(response.data);
+  }
+
+  useEffect(() => {
+    getDataUpdate()
+  }, [])
 
   return (
     <form onSubmit={handleSubmit(onAction)}>

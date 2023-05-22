@@ -14,10 +14,7 @@ export function UpdatePost() {
         navigate('/')
     }
 
-    // useEffect(() => {
-    //     api.get(`/posts/${id}`)
-    //     .then(response => console.log(response.data))
-    // }, [])
+
 
     return (
         <div>
