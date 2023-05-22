@@ -1,9 +1,7 @@
 import { useForm } from "react-hook-form";
-import "./styles.css";
-import { api } from '../../lib/axios';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
-import { useNavigate } from "react-router-dom";
+import "./styles.css";
 
 const postSchema = yup.object({
   title: yup.string().required('Informe o campo título'),
@@ -14,17 +12,9 @@ const postSchema = yup.object({
 
 export function Form({ title, txtButton, onAction }) {
 
-  const navigate = useNavigate()
-
   const { register, handleSubmit, reset, formState: {errors} } = useForm({
     resolver: yupResolver(postSchema)
   })
-
-  function handleCreatePost(data) {
-    api.post('/posts', data)
-    navigate('/')
-    reset()
-  }
 
   return (
     <form onSubmit={handleSubmit(onAction)}>
